@@ -1,0 +1,51 @@
+
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --accent:#0b5cff;
+  --muted:#6b7280;
+  --card:#f8fafc;
+  --border:#e6e9ee;
+  --max-width:900px;
+  --pad:20px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+.site-header{
+  border-bottom:1px solid var(--border);
+  padding:16px var(--pad);
+  background:linear-gradient(180deg, rgba(250,250,252,1), rgba(255,255,255,1));
+}
+.nav{display:flex;gap:16px;align-items:center;margin-bottom:8px}
+.nav a{color:var(--accent);text-decoration:none;font-weight:600}
+.title{margin:0;font-size:1.4rem}
+.subtitle{margin:0;color:var(--muted);font-size:0.95rem}
+
+.container{
+  max-width:var(--max-width);
+  margin:24px auto;
+  padding:0 var(--pad);
+}
+h2{margin-top:0;color:var(--text)}
+.contact ul, .skills ul, .experience ul, .awards ul{padding-left:1.2rem}
+.section-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:16px;
+  border-radius:8px;
+  margin-bottom:16px;
+}
+.contact, .summary, .education, .experience, .skills, .awards{margin-bottom:18px;padding-bottom:8px}
+.foot{color:var(--muted);font-size:0.9rem;margin-top:30px;border-top:1px solid var(--border);padding-top:12px}
+
+/* Responsive */
+@media (max-width:720px){
+  .nav{flex-wrap:wrap}
+  .title{font-size:1.2rem}
+}
